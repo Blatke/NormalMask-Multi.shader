@@ -42,7 +42,7 @@ It lets the normal map show bump effect according to its red, green and blue par
 
 ![image](https://github.com/user-attachments/assets/66fe6c01-cff3-4fef-bd3e-5212a21123e9)
 
-This mask texture slot is white by default that it let the normal map display effect if there is no image imported in it.
+This mask texture slot is white by default that it lets the normal map display effect if there is no image imported in it.
 #### Mask 1 Red Strength
 Intensity that the red part of the mask affects the normal map.
 #### Mask 1 Green Strength
