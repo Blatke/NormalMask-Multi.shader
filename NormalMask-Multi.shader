@@ -116,8 +116,7 @@
             fixed greenMax = max(mask1.g * _MaskGreenStrength1, max(mask2.g * _MaskGreenStrength2, max(mask3.g * _MaskGreenStrength3, max(mask4.g * _MaskGreenStrength4, mask5.g * _MaskGreenStrength5))));
             fixed blueMax = max(mask1.b * _MaskGreenStrength1, max(mask2.b * _MaskGreenStrength2, max(mask3.b * _MaskGreenStrength3, max(mask4.b * _MaskGreenStrength4, mask5.b * _MaskGreenStrength5))));
 
-            fixed4 maxMask = fixed4(redMax, greenMax, blueMax, 1);
-            fixed maxMaskFactor = max(maxMask.r, max(maxMask.g,maxMask.b));
+            fixed maxMaskFactor = max(redMax, max(greenMax,blueMax));
 
             tangentNormal *= _NormalStrength;
 
