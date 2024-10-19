@@ -7,14 +7,16 @@ I plan to use this shader in some circumstance such as on tight clothes. When ro
 
 ## List of Properties
 ### Main
+#### Albedo
+Main texture as an RGBA image.
+
+White by default.
 #### Color
 Tint color that blends with the color of the main texture.
 
 White by default.
-#### Albedo
-Main texture as an RGB image.
-
-White by default.
+#### Cutout
+If there's a value in Alpha channel of the main texture, any pixels will be discarded when its alpha value is smaller than this cutout parameter. So, the transparent or semi-transparent parts on the main texture could be culled.
 #### OMS
 An RGB texture for occlusion (red), metallic (green) and smoothness (blue).
 
@@ -22,6 +24,28 @@ White by default.
 #### Occlusion
 #### Metallic
 #### Smoothness
+
+### Color Mask
+#### Albedo Mask
+To import an RGB texture in it, the colors of corresponding parts on the main texture can be specifically controlled according to the red, green and blue parts on this albedo mask texture.
+
+Black by default.
+#### Mask R Color
+The color to blend with the parts on the main texture that is referred by the red parts on the albedo mask texture.
+#### Mask G Color
+The color to blend with the parts on the main texture that is referred by the green parts on the albedo mask texture.
+#### Mask B Color
+The color to blend with the parts on the main texture that is referred by the blue parts on the albedo mask texture.
+
+For instance, I imported this RGB texture below as the albedo mask:
+
+![未命名-6](https://github.com/user-attachments/assets/d64a786e-7418-40be-91f9-a3bd8c8dd991)
+
+The none-black parts on the mask let the main texture be blended with those three options for mask colors. I gave different colors to those options, and the effect shows like this:
+
+![image](https://github.com/user-attachments/assets/b2460118-fa6b-44bd-be09-56cf58dd4460)
+
+### Normal Maps
 #### Normal Map
 Normal texture to show bump effect.
 #### Normal Strength
@@ -34,9 +58,7 @@ Intensity that the detail normal map exerts influence.
 #### Normal Map Mask 1
 An RGB texture on which the parts with the values in the red, green or blue channels repectively indicates what corresponding parts of the NORMAL map (NOT the detail normal map) to show. 
 
-Like the texture below used as a normal mask:
-
-![未命名-6](https://github.com/user-attachments/assets/d64a786e-7418-40be-91f9-a3bd8c8dd991)
+Suppose that we import the albedo mask texture we mentioned above as the normal map mask texture.
 
 It lets the normal map show bump effect according to its red, green and blue parts, and nothing on its black parts (see the right cube; the left one is without the mask).
 
