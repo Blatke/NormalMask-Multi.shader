@@ -1,9 +1,15 @@
 # NormalMask-Multi.shader
 A Unity shader that supports 5 normal masks to affect the display of the normal map.
+## Features
+1. Normal Masks
 
 Each mask has 3 channels (RBG) to decide whether the corresponding parts on the normal map to show bump effect. So, we can have 5 * 3 = 15 different parts in total to affect the display of the normal map.
 
-I plan to use this shader in some circumstance such as on tight clothes. When rotating an arm, the masks can let the normal map show some wrinkles on the elbow with other parts of the normal map still hidding. If you have a script to link the parameters of this shader with the rotation of the joints, those wrinkles can be automatically driven by the character's movements.
+You can use this shader in some circumstance such as on tight clothes. When rotating an arm, the masks can let the normal map show some wrinkles on the elbow with other parts of the normal map still hidding. If you have a script to link the parameters of this shader with the rotation of the joints, those wrinkles can be automatically driven by the character's movements.
+
+2. Color Mask
+
+Use an RGB texture to indicate which parts of the main texture to be blended with designated colors.
 
 ## List of Properties
 ### Main
