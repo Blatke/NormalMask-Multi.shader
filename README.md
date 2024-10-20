@@ -11,6 +11,10 @@ You can use this shader in some circumstance such as on tight clothes. When rota
 
 Use an RGB texture to indicate which parts of the main texture to be blended with designated colors.
 
+3. OMS Mask
+
+Use an RGB texture to respectively control the Occlusion, Metallic and Smoothness of the material by red, green and blue channel.
+
 ## List of Properties
 ### Main
 #### Albedo
