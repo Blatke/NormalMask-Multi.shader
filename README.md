@@ -91,3 +91,6 @@ For instance, I reduced the Blue Strength to 0 without adjusting the values in t
 ### Normal Map Mask 4
 ### Normal Map Mask 5
 The properties from Normal Map Mask 2 to Normal Map Mask 5 are similar to Normal Map Mask 1 except that the mask texture slots here are black by default.
+
+## Application Case
+[NormalMask-Multi-Shader-for-ME](https://github.com/Blatke/NormalMask-Multi-Shader-for-ME), a shader mod for HS2 / AIS.
