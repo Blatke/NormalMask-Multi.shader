@@ -15,6 +15,10 @@ Use an RGB texture to indicate which parts of the main texture to be blended wit
 
 Use an RGB texture to respectively control the Occlusion, Metallic and Smoothness of the material by red, green and blue channel.
 
+4. Cutout
+
+Supports for importing the main texture with alpha channel that indicates the parts on the texture to cull.
+
 ## List of Properties
 ### Main
 #### Albedo
