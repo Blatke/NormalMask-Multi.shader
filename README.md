@@ -90,11 +90,13 @@ For instance, I reduced the Blue Strength to 0 without adjusting the values in t
 
 ![image](https://github.com/user-attachments/assets/6fad14d7-a9da-4b38-bded-a5042d5388b8)
 
-### Normal Map Mask 2
-### Normal Map Mask 3
-### Normal Map Mask 4
-### Normal Map Mask 5
+### Normal Mask 2
+### Normal Mask 3
+### Normal Mask 4
+### Normal Mask 5
 The properties from Normal Map Mask 2 to Normal Map Mask 5 are similar to Normal Map Mask 1 except that the mask texture slots here are black by default.
+
+Please note that if multiple normal masks have some parts overlapped, the shader will get the biggest value among their channels on these overlapped parts with ignoring the rest values instead of cumulating these values.
 
 ## Application Case
 [NormalMask-Multi-Shader-for-ME](https://github.com/Blatke/NormalMask-Multi-Shader-for-ME), a shader mod for HS2 / AIS.
